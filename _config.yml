@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: _next
 # avatar: /lib/images/01.png
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
