@@ -4,10 +4,10 @@
 
 # Site
 title: feibi's Blog
-subtitle: "端正心态,迎接新挑战"
+subtitle: "心之所向 素履以往"
 description:
 author: feibi
-language: zh-Hans
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:

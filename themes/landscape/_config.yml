@@ -9,7 +9,7 @@ excerpt_link: Read More
 fancybox: true
 
 # Sidebar
-sidebar: right
+sidebar: left
 widgets:
 - category
 - tag
@@ -34,3 +34,5 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+
+language: zh-CN
