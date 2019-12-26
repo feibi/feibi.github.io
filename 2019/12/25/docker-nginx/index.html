@@ -46,27 +46,32 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="feibi&#39;s Blog">
-<meta property="og:url" content="https://feibi.github.io/index.html">
+  <meta name="description" content="练习使用docker，记录下具体流程。  拉取 nginx 镜像12# 选择更小体积的基础镜像docker pull nginx:alpine 第一次启动 nginx 容器1docker run -d --rm --name nginx nginx --rm会在容器停止时删除，--name nginx 命名容器名为 nginx, nginx表示使用 nginx 镜像 拷贝容器的 nginx 目录到">
+<meta name="keywords" content="docker,nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用 docker 启动 nginx">
+<meta property="og:url" content="https://feibi.github.io/2019/12/25/docker-nginx/index.html">
 <meta property="og:site_name" content="feibi&#39;s Blog">
+<meta property="og:description" content="练习使用docker，记录下具体流程。  拉取 nginx 镜像12# 选择更小体积的基础镜像docker pull nginx:alpine 第一次启动 nginx 容器1docker run -d --rm --name nginx nginx --rm会在容器停止时删除，--name nginx 命名容器名为 nginx, nginx表示使用 nginx 镜像 拷贝容器的 nginx 目录到">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-26T07:34:10.741Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="feibi&#39;s Blog">
+<meta name="twitter:title" content="利用 docker 启动 nginx">
+<meta name="twitter:description" content="练习使用docker，记录下具体流程。  拉取 nginx 镜像12# 选择更小体积的基础镜像docker pull nginx:alpine 第一次启动 nginx 容器1docker run -d --rm --name nginx nginx --rm会在容器停止时删除，--name nginx 命名容器名为 nginx, nginx表示使用 nginx 镜像 拷贝容器的 nginx 目录到">
 
-<link rel="canonical" href="https://feibi.github.io/">
+<link rel="canonical" href="https://feibi.github.io/2019/12/25/docker-nginx/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false
+    isHome: false,
+    isPost: true
   };
 </script>
 
-  <title>feibi's Blog</title>
+  <title>利用 docker 启动 nginx | feibi's Blog</title>
   
 
 
@@ -172,10 +177,10 @@
             
 
   <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://feibi.github.io/2019/12/25/docker-nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -189,8 +194,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/25/docker-nginx/" class="post-title-link" itemprop="url">利用 docker 启动 nginx</a>
+          利用 docker 启动 nginx
         </h1>
 
         <div class="post-meta">
@@ -226,7 +230,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>练习使用docker，记录下具体流程。</p>
+        <p>练习使用docker，记录下具体流程。</p>
 <hr>
 <h5 id="拉取-nginx-镜像"><a href="#拉取-nginx-镜像" class="headerlink" title="拉取 nginx 镜像"></a>拉取 nginx 镜像</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 选择更小体积的基础镜像</span></span><br><span class="line">docker pull nginx:alpine</span><br></pre></td></tr></table></figure>
 <h5 id="第一次启动-nginx-容器"><a href="#第一次启动-nginx-容器" class="headerlink" title="第一次启动 nginx 容器"></a>第一次启动 nginx 容器</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --rm --name nginx nginx</span><br></pre></td></tr></table></figure>
@@ -251,200 +255,37 @@
 <p>查看容器在宿主机的 ip:<br>windows: <code>ipconfig</code> 配合 <code>route print</code><br>linux: <code>ip addr show docker0</code></p>
 <h5 id="重启-conf-nginx-conf"><a href="#重启-conf-nginx-conf" class="headerlink" title="重启 conf/nginx.conf"></a>重启 <code>conf/nginx.conf</code></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it nginx service nginx reload</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"># docker</a>
+              <a href="/tags/nginx/" rel="tag"># nginx</a>
+          </div>
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://feibi.github.io/2019/12/18/git-command/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/lib/images/avatar.jpg">
-      <meta itemprop="name" content="feibi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="feibi's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/18/git-command/" class="post-title-link" itemprop="url">Git常用命令</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-12-19 00:00:00" itemprop="dateCreated datePublished" datetime="2019-12-19T00:00:00+08:00">2019-12-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-26 15:34:10" itemprop="dateModified" datetime="2019-12-26T15:34:10+08:00">2019-12-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h5 id="分支比较"><a href="#分支比较" class="headerlink" title="分支比较"></a>分支比较</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git diff  </span><br><span class="line"></span><br><span class="line">option:   </span><br><span class="line">--name-only 	只比较文件名</span><br><span class="line">--stat		比较统计信息</span><br><span class="line"></span><br><span class="line">a). git diff &lt;branch1&gt;..&lt;branch2&gt;  	比较两个分支之间差异 </span><br><span class="line">b). git diff --staged					比较暂存区和版本库差异</span><br></pre></td></tr></table></figure>
-<h5 id="管理源"><a href="#管理源" class="headerlink" title="管理源"></a>管理源</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote -v 查看远程源</span><br><span class="line">git remote show origin  查看remote地址，远程分支，还有本地分支与之相对应关系等信息</span><br><span class="line">git remote rm origin			删除源</span><br><span class="line">git remote add origin &lt;url&gt;		添加源</span><br></pre></td></tr></table></figure>
-<h5 id="设置分支远程与本地的对应关系"><a href="#设置分支远程与本地的对应关系" class="headerlink" title="设置分支远程与本地的对应关系"></a>设置分支远程与本地的对应关系</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -u origin/&lt;branch&gt; &lt;branch&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete &lt;branch&gt; </span><br><span class="line">git remote prune origin  删除远程仓库不存在的分支</span><br></pre></td></tr></table></figure>
-<h5 id="回退到的版本"><a href="#回退到的版本" class="headerlink" title="回退到的版本"></a>回退到<commit id>的版本</commit></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git  reset --hard  &lt;commit ID&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="撤消上一个commit，但保留add的文件"><a href="#撤消上一个commit，但保留add的文件" class="headerlink" title="撤消上一个commit，但保留add的文件"></a>撤消上一个commit，但保留add的文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD~1</span><br></pre></td></tr></table></figure>
-<h5 id="撤销add内容"><a href="#撤销add内容" class="headerlink" title="撤销add内容"></a>撤销add内容</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset head</span><br></pre></td></tr></table></figure>
-<h5 id="清除untracked-files"><a href="#清除untracked-files" class="headerlink" title="清除untracked files"></a>清除untracked files</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clean -f -d</span><br></pre></td></tr></table></figure>
-<h5 id="合并commit-id"><a href="#合并commit-id" class="headerlink" title="合并commit id"></a>合并commit id</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-pick &lt;commit id&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="免密登陆"><a href="#免密登陆" class="headerlink" title="免密登陆"></a>免密登陆</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
-<h5 id="提交所有标签"><a href="#提交所有标签" class="headerlink" title="提交所有标签"></a>提交所有标签</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --tags</span><br></pre></td></tr></table></figure>
-<h5 id="更新version"><a href="#更新version" class="headerlink" title="更新version"></a>更新version</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm version [&lt;newversion&gt; | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]</span><br></pre></td></tr></table></figure>
-<h5 id="删除远程标签"><a href="#删除远程标签" class="headerlink" title="删除远程标签"></a>删除远程标签</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete tag &lt;tagName&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="查看git-stash-pop操作"><a href="#查看git-stash-pop操作" class="headerlink" title="查看git stash pop操作"></a>查看git stash pop操作</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fsck --no-reflog</span><br></pre></td></tr></table></figure>
-<h5 id="恢复因git-reset-–hard导致丢失的工作区文件"><a href="#恢复因git-reset-–hard导致丢失的工作区文件" class="headerlink" title="恢复因git reset –hard导致丢失的工作区文件"></a>恢复因git reset –hard导致丢失的工作区文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">find .git/objects -type f | xargs ls -lt | sed 20q</span><br><span class="line"></span><br><span class="line">//.git/objects/1f/b72f8f5e711cf3c6e968942bf70c7668e05d75</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意去掉分隔符 <code>git cat-file -p 1fb72f8f5e711cf3c6e968942bf70c7668e05d75</code></p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://feibi.github.io/2017/02/15/webstorm集成ssh-session/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/lib/images/avatar.jpg">
-      <meta itemprop="name" content="feibi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="feibi's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/02/15/webstorm集成ssh-session/" class="post-title-link" itemprop="url">webstorm集成SSH session</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-02-15 10:49:59" itemprop="dateCreated datePublished" datetime="2017-02-15T10:49:59+08:00">2017-02-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-26 15:34:10" itemprop="dateModified" datetime="2019-12-26T15:34:10+08:00">2019-12-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/开发工具/" itemprop="url" rel="index">
-                    <span itemprop="name">开发工具</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.打开webstorm,菜单栏找到Tools &gt; Start SSH session</p>
-<p><img src="/lib/images/01.png" alt="img01"><br>2.点击弹出SSH session表单,输入表单  </p>
-<p><img src="/lib/images/02.png" alt="img02"><br>3.弹出Terminal控制台   </p>
-<p><img src="/lib/images/03.png" alt="img03"></p>
-<hr>
-<blockquote>
-<p>提示：暂时没发现有保存记录的功能，每次需要重新操作输入</p>
-</blockquote>
-
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/18/git-command/" rel="prev" title="Git常用命令">
+      <i class="fa fa-chevron-left"></i> Git常用命令
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
 
   </div>
-
-  
-
 
 
           </div>
@@ -495,6 +336,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#拉取-nginx-镜像"><span class="nav-number">1.</span> <span class="nav-text">拉取 nginx 镜像</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第一次启动-nginx-容器"><span class="nav-number">2.</span> <span class="nav-text">第一次启动 nginx 容器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#拷贝容器的-nginx-目录到宿主机"><span class="nav-number">3.</span> <span class="nav-text">拷贝容器的 nginx 目录到宿主机</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#停止-nginx-容器（自动删除）"><span class="nav-number">4.</span> <span class="nav-text">停止 nginx 容器（自动删除）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二次启动-nginx-容器-挂载配置文件，容器会使用宿主机的-nginx-配置"><span class="nav-number">5.</span> <span class="nav-text">第二次启动 nginx 容器, 挂载配置文件，容器会使用宿主机的 nginx 配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改宿主机conf-nginx-conf配置"><span class="nav-number">6.</span> <span class="nav-text">修改宿主机conf/nginx.conf配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#重启-conf-nginx-conf"><span class="nav-number">7.</span> <span class="nav-text">重启 conf/nginx.conf</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
